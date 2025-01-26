@@ -4,9 +4,9 @@ import Button from "../Button";
 class Form extends React.Component {
     render() {
         return (
-            <form>
-                <div>
-                    <label>
+            <form className="newTask">
+                <div className="inputContainer">
+                    <label htmlFor="task">
                         Add a new task
                     </label>
                     <input
@@ -17,9 +17,9 @@ class Form extends React.Component {
                         required
                     />
                 </div>
-                <div>
-                    <label>
-Time
+                <div className="inputContainer">
+                    <label htmlFor="task">
+                        Time
                     </label>
                     <input
                         type="time"
