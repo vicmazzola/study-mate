@@ -19,7 +19,7 @@ class Form extends React.Component {
                     />
                 </div>
                 <div className={style.inputContainer}>
-                    <label htmlFor="task">
+                    <label htmlFor="time">
                         Time
                     </label>
                     <input
