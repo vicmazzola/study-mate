@@ -1,4 +1,5 @@
 import style from './List.module.scss';
+import Item from "./Item";
 
 function List() {
 
@@ -19,15 +20,11 @@ function List() {
         <aside className={style.taskList}>
             <h2> Day's Tasks</h2>
             <ul>
-                { tasks.map((task, index) => (
-                    <li key={index} className={style.item}>
-                        <h3>
-                            {task.task}
-                        </h3>
-                        <span>
-                            {task.time}
-                        </span>
-                    </li>
+                {tasks.map((item, index) => (
+                    <Item
+                        key={index}
+                        {...item}
+                    />
                 ))}
             </ul>
         </aside>
