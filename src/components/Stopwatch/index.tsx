@@ -10,10 +10,10 @@ export default function Stopwatch() {
             </p>
             <div className={style.watchWrapper}>
                 <Watch/>
+            </div>
                 <Button>
                     Start!
                 </Button>
-            </div>
         </div>
 
     )
