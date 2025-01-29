@@ -5,14 +5,23 @@ import Stopwatch from "../components/Stopwatch";
 import {useState} from "react";
 import {ITask} from "../types/ITask.ts";
 
-function App() {
 
+function App() {
     const [tasks, setTasks] = useState<ITask[]>([]);
+
+    const [selected, setSelected] = useState<ITask | null>(null);
+
+    function selectTask(selectedTask: ITask) {
+        setSelected(selectedTask)
+    }
 
     return (
         <div className={style.AppStyle}>
             <Form setTasks={setTasks}/>
-            <List tasks={tasks}/>
+            <List
+                tasks={tasks}
+                selectTask={selectTask}
+            />
             <Stopwatch/>
         </div>
     )
