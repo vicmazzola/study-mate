@@ -7,9 +7,10 @@ import {useEffect, useState} from "react";
 
 interface StopwatchProps {
     selected: ITask | undefined;
+    finishTask: () => void
 }
 
-export default function Stopwatch({selected}: StopwatchProps) {
+export default function Stopwatch({selected, finishTask }: StopwatchProps) {
 
     const [time, setTime] = useState<number>();
 
@@ -26,7 +27,7 @@ export default function Stopwatch({selected}: StopwatchProps) {
                 setTime(counter - 1);
                 return countdown(counter - 1);
             }
-            completeTask();
+            finishTask();
         }, 1000)
     }
 
