@@ -4,7 +4,7 @@ StudyMate is a React-based project developed as part of the Alura course **React
 This application explores key React concepts, TypeScript integration, and modular styling using SCSS.
 
 ## 🌐 Live Demo
-Explore the live application at: [StudyMate](https://github.com/vicmazzola/study-mate)
+Explore the live application at: [StudyMate](https://study-mate-hazel.vercel.app/)
 
 ## 🔨 Project Features
 - **Vite** for fast project setup and efficient development.
