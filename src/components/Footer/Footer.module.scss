@@ -1,0 +1,17 @@
+.footer {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 12px 0;
+  position: relative;
+
+  .footer-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+
+    .footer-text {
+      font-size: 0.875rem;
+    }
+  }
+}

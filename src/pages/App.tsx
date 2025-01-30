@@ -4,6 +4,7 @@ import style from './App.module.scss';
 import Stopwatch from "../components/Stopwatch";
 import {useState} from "react";
 import {ITask} from "../types/ITask.ts";
+import Footer from "../components/Footer";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
                 selected={selected}
                 finishTask={finishTask}
             />
+            <Footer/>
         </div>
     )
 }
