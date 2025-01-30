@@ -1,4 +1,4 @@
-import style from "../List.module.scss"
+import style from "./Item.module.scss"
 import {ITask} from "../../../types/ITask.ts";
 
 interface ItemProps extends ITask {
@@ -15,11 +15,10 @@ export default function Item(
         id,
         selectTask
     }: ItemProps) {
-    console.log('actual item: ', {task, time, selected, completed, id})
     return (
 
         <li
-            className={style.item}
+            className={`${style.item} ${selected ? style.itemSelected : ""} `}
             onClick={() => selectTask(
                 {
                     task,
