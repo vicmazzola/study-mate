@@ -6,17 +6,18 @@ import {ITask} from "../../types/ITask.ts";
 import {useEffect, useState} from "react";
 
 interface StopwatchProps {
-    selected: ITask | undefined;
+    selected: ITask | null;
     finishTask: () => void
 }
 
 export default function Stopwatch({selected, finishTask }: StopwatchProps) {
 
-    const [time, setTime] = useState<number>();
+    const [time, setTime] = useState<number>(0
+    );
 
     useEffect(() => {
         if (selected?.time) {
-            setTime(timeToSeconds(selected.time))
+            setTime(timeToSeconds(selected.time) || 0)
         }
 
     }, [selected])
@@ -37,9 +38,9 @@ export default function Stopwatch({selected, finishTask }: StopwatchProps) {
                 Choose a card and start the stopwatch
             </p>
             <div className={style.watchWrapper}>
-                <Watch time={time}/>
+                <Watch time={time ?? 0}/>
             </div>
-            <Button onClick={() => countdown(time)}>
+            <Button onClick={() => time && countdown(time)}>
                 Start!
             </Button>
         </div>
